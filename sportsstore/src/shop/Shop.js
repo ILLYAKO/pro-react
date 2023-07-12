@@ -36,4 +36,3 @@ export class Shop extends Component {
         );
     }
 }
-// p.128
