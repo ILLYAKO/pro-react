@@ -16,7 +16,7 @@ export class ToggleLink extends Component {
                     const combinedClasses = `${baseClasses} ${
                         routeProps.match ? activeClass : inActiveClass
                     }`;
-                    console.log(this.props.children + "1 : " + JSON.stringify(routeProps));
+                    // console.log(this.props.children + "1 : " + JSON.stringify(routeProps));
                     return (
                         <Link to={this.props.to} className={combinedClasses}>
                             {this.props.children}
