@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { ValidationError } from "./ValidationError";
 import { GetMessages } from "./ValidationMessages";
 
-export class ValidationForm extends Component {
+export class ValidatedForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            ValidationError: {},
+            validationErrors: {},
         };
         this.formElements = {};
     }
@@ -15,7 +15,7 @@ export class ValidationForm extends Component {
         this.setState(
             (state) => {
                 const newState = { ...state, validationErrors: {} };
-                Object.values(this.formElement).forEach((elem) => {
+                Object.values(this.formElements).forEach((elem) => {
                     if (!elem.checkValidity()) {
                         newState.validationErrors[elem.name] =
                             GetMessages(elem);
